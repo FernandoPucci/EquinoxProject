@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+      <RuntimeFrameworkVersion>2.0.3</RuntimeFrameworkVersion> 
     <AssemblyName>Equinox.Infra.CrossCutting.Identity</AssemblyName>
     <PackageId>Equinox.Infra.CrossCutting.Identity</PackageId>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
@@ -26,11 +27,16 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.0.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.0.4" />
+     <PackageReference Include="NETStandard.Library" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
     <Folder Include="Extensions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" /><!-- remove if needed , default use 1.0.0 version-->
   </ItemGroup>
 
   <ItemGroup>
